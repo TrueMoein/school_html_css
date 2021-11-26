@@ -1,0 +1,202 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.header {
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, #0f2027b2, #27414aab, #000000c0),
+    url(images/banner.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 150px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+  list-style: none;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0;
+  position: relative;
+  top: 5px;
+  height: 2px;
+  display: block;
+  background-color: orange;
+  transition: 0.3s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.text-box {
+  text-align: center;
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.text-box h1 {
+  font-size: 50px;
+}
+
+.text-box p {
+  margin: 10px 0 40px;
+  font-size: 20px;
+}
+
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  border: solid 1px white;
+  font-size: 18px;
+  padding: 12px 34px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: orange;
+  border: solid 1px rgb(255, 136, 0);
+}
+
+/* Course section styles */
+
+.course {
+  width: 80%;
+  margin: 100px auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+p {
+  color: gray;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5%;
+}
+
+.course-col {
+  background-color: #ffece0;
+  flex-basis: 31%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.course-col:hover {
+  box-shadow: 5px 7px 10px 0px #00000040;
+}
+
+h3 {
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+  .nav-links {
+    display: none;
+  }
+}
+
+.campus {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+.campus-col {
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.campus-col:hover {
+  box-shadow: 5px 7px 10px 0px #00000040;
+}
+
+.campus-col img {
+  width: 100%;
+  height: 100%;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.layer h3 {
+  position: absolute;
+  bottom: 1%;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.layer:hover h3 {
+  opacity: 100%;
+  bottom: 50%;
+}
+
+.layer:hover {
+  background-image: linear-gradient(to bottom, #ffece0e5, #0000);
+  color: rgb(0, 0, 0);
+}
